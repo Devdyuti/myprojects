@@ -1,0 +1,13 @@
+org\core\tutorial\java8\Example$MathOperation.class
+org\core\tutorial\java8\MethodReferenceTest.class
+org\dev\TestDataSource.class
+org\core\tutorial\mongo\ConnectToMongoDB.class
+org\core\tutorial\java8\Example.class
+org\core\tutorial\java8\Example$GreetingService.class
+org\core\tutorial\mongo\DBConn.class
+org\core\tutorial\java8\FunctionalInterfaceTest.class
+org\core\tutorial\java8\LoggerTest.class
+org\dev\TestSteps.class
+org\dev\Testing.class
+org\core\tutorial\mongo\DBOConn.class
+org\core\tutorial\mongo\SaveDocuments.class

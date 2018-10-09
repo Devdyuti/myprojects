@@ -13,6 +13,8 @@
   <modules>
   	<module>spring-boot-web</module>
   	<module>spring-ws</module>
+    <module>core-tutorial</module>
+    <module>jcr-data-migration</module>
   </modules>
   
     <parent>
@@ -27,7 +29,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <slf4j.version>1.7.4</slf4j.version>
-    <lombok.version>1.16.10</lombok.version>
   </properties>
 
   <dependencies>
@@ -41,16 +42,16 @@
       <artifactId>slf4j-api</artifactId>
       </dependency>
 	<dependency>
-	    <groupId>org.projectlombok</groupId>
-	    <artifactId>lombok</artifactId>
-	    <version>${lombok.version}</version>
-	</dependency>
-	<dependency>
 		<groupId>org.mongodb</groupId>
 		<artifactId>mongo-java-driver</artifactId>
 	</dependency>
+	<!-- content negotiation rest dependency -->
+	<dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-xml</artifactId>
+    </dependency>
   </dependencies>
-
+  
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -109,7 +110,7 @@
         						</goals>
         					</pluginExecutionFilter>
         					<action>
-        						<ignore></ignore>
+        						<ignore/>
         					</action>
         				</pluginExecution>
         			</pluginExecutions>
