@@ -1,5 +1,6 @@
 package org.dev;
 
+import java.lang.reflect.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,6 +18,7 @@ public class Testing {
 	
 	public static void main(String[] args) throws SQLException {
 			try {
+				
 				conn=DBOConn.getConnection();
 				ps=conn.prepareStatement("SELECT * FROM JCR_REP_FSENTRY");
 				rs=ps.executeQuery();
