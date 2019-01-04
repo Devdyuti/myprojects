@@ -8,9 +8,8 @@ public class Test implements Runnable
 {
 	public static <E> void main(String[] args) {	
 		Vector v= new Vector();
-		List<String> list=new ArrayList<>();
+		List<String> list=new ArrayList<String>();
 	}
-
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
