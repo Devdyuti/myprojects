@@ -29,14 +29,13 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <slf4j.version>1.7.4</slf4j.version>
+    <mockito-all.version>1.10.19</mockito-all.version>
+    <mockito-core.version>1.10.19</mockito-core.version>
+    <junit.version>4.10</junit.version>
+    <oracle.driver.version>10.2.0.3.0</oracle.driver.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency> 
+  <dependencies> 
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -50,6 +49,17 @@
       <groupId>com.fasterxml.jackson.dataformat</groupId>
       <artifactId>jackson-dataformat-xml</artifactId>
     </dependency>
+    <!-- testing dependencies -->
+     <dependency>
+       <groupId>org.mockito</groupId>
+       <artifactId>mockito-all</artifactId>
+       <version>${mockito-all.version}</version>
+     </dependency>		
+	 <dependency>
+	   <groupId>org.mockito</groupId>
+	   <artifactId>mockito-core</artifactId>
+	   <version>${mockito-core.version}</version>
+	 </dependency>	
   </dependencies>
   
   <build>

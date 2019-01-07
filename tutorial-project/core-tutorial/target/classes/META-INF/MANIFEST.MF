@@ -4,6 +4,6 @@ Implementation-Version: 1.0-SNAPSHOT-RC-1.1
 Built-By: dsingh
 Implementation-Vendor-Id: org.core.tutorial
 Build-Jdk: 1.8.0_171
-Implementation-URL: http://maven.apache.org
+Implementation-URL: http://www.example.com/core-tutorial
 Created-By: Maven Integration for Eclipse
 
