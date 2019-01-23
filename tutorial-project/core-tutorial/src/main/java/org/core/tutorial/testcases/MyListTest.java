@@ -1,14 +1,13 @@
 package org.core.tutorial.testcases;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.NoSuchElementException;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import junit.framework.TestCase;
 
-public class MyListTest {
+public class MyListTest extends TestCase{
 	
 	private MyList myList=new MyList();
 	
@@ -42,6 +41,5 @@ public class MyListTest {
 	public void destroy() {
 		myList.removeAll();
 	}
-	
 	
 }
