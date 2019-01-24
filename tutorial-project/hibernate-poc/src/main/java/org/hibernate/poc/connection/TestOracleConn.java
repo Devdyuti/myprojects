@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import org.hibernate.cfg.Configuration;
+
 public class TestOracleConn {
 	
 	private static Connection conn=null;
