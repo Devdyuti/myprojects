@@ -24,5 +24,17 @@
 		<artifactId>hibernate-core</artifactId>
 		<version>${hibernate.version}</version>
 	</dependency>
+	<!-- Oracle14 dependency	
+	<dependency>
+	 	<groupId>com.oracle</groupId>
+	 	<artifactId>ojdbc14</artifactId>
+	 	<version>${oracle14.db.version}</version>
+	 </dependency> -->
+	 <!-- https://mvnrepository.com/artifact/com.github.noraui/ojdbc8 -->
+	<dependency>
+	    <groupId>com.github.noraui</groupId>
+	    <artifactId>ojdbc8</artifactId>
+	    <version>${oracle8.db.version}</version>
+	</dependency>
   </dependencies>
 </project>

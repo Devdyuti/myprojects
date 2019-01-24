@@ -1,1 +1,4 @@
-org\hibernate\poc\App.class
+org\hibernate\poc\connection\TestOracleConn.class
+org\hibernate\poc\autoddl\Employee.class
+org\hibernate\poc\connection\DBConn.class
+org\hibernate\poc\autoddl\AutoDDLSupportTest.class
