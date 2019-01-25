@@ -1,8 +1,22 @@
 package org.hibernate.poc.autoddl;
 
 public class Employee {
+	private int id;
 	private String name;
-	private int age;
-	private Number phone;
+	private String email;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	
 }

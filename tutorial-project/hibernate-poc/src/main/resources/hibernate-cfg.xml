@@ -11,8 +11,12 @@
 		<property name="hibernate.connection.username">system</property>
 		<property name="hibernate.connection.password">root</property>
 		<property name="show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">false</property>
 
-		<!-- Specifying Session Context -->
-		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+		<!-- Mapping.xml files  -->
+		<mapping resource="xml/employee.xml"/>
+
  	</session-factory>
  </hibernate-configuration>
