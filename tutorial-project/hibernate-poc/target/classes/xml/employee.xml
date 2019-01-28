@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
     
     <hibernate-mapping>
-    	<class name="org.hibernate.poc.autoddl.Employee" table="employee" schema="system">
+    	<class name="org.hibernate.poc.autoddl.Employee" table="employee" schema="tutouser">
     	<id name="id"/>
     	<property name="name"/>
     	<property name="email"/>

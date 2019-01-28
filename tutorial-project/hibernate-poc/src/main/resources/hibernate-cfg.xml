@@ -15,8 +15,7 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">false</property>
 
-		<!-- Mapping.xml files  -->
-		<mapping resource="xml/employee.xml"/>
+		<mapping class="org.hibernate.poc.autoddl.Employee"/>
 
  	</session-factory>
  </hibernate-configuration>

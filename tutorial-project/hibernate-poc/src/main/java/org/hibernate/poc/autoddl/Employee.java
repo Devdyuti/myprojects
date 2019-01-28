@@ -1,10 +1,37 @@
 package org.hibernate.poc.autoddl;
 
-public class Employee {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name="employee")
+@Table(name="tutouser.employee")
+public class Employee implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	private int id;
 	private String name;
+	@Column(name="email", unique=true, columnDefinition="varchar(64)")
 	private String email;
-	
+		
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -17,6 +44,13 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public Employee(String name, String email) {
+		this.name = name;
+		this.email = email;
+	}
+	
+	
 	
 	
 }
