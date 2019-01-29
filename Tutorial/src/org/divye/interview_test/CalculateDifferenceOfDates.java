@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 class Person{
 	private String name;
 }
-public class CalculateDifference {
+public class CalculateDifferenceOfDates {
 	
 	public static String regix="^[0-3]?[0-9]-[0-3]?[0-9]-(?:[0-9]{2})?[0-9]{2}$";
 	
