@@ -1,11 +1,13 @@
 package org.hibernate.poc.autoddl;
 
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.poc.connection.CHibernateUtils;
 
 public class AutoDDLSupportTest {
+
 
 	public static void main(String[] args) {
 		Transaction tx=null;
@@ -18,7 +20,7 @@ public class AutoDDLSupportTest {
 			tx=session.beginTransaction();
 			
 			// Adding object using save, persist or saveOrUpdate methods
-			Employee emp=new Employee("Rakesh", "rakesh@gmail.com");
+			Employee emp=new Employee("Sudhir", "sudhir@gmail.com");
 			Integer i=(Integer) session.save(emp);
 			tx.commit();
 			if(i!=null) {
@@ -28,7 +30,9 @@ public class AutoDDLSupportTest {
 			}
 			
 		}catch (Exception e) {
-			System.out.println("");
+			System.out.println("Exception in AuoDDLSupport:: "+e);
+		}finally {
+			session.close();
 		}
 		
 	}

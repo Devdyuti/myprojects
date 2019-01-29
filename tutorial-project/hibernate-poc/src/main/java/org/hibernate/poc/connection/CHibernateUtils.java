@@ -1,5 +1,6 @@
 package org.hibernate.poc.connection;
 
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -8,9 +9,10 @@ public class CHibernateUtils {
 	
 	static {
 		try {
-		Configuration cfg=new Configuration();
-		cfg.configure("hibernate-cfg.xml");
+		Configuration cfg=new Configuration();		
+		cfg.configure();
 		factory=cfg.buildSessionFactory();
+		
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
