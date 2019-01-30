@@ -30,8 +30,8 @@ public class Student implements Serializable{
 	private String name;
 	@Column(name="roll", unique=true, columnDefinition="varchar(64)")
 	private String roll;
-	@Column(name="phone", unique=true, columnDefinition="number(10)")
-	private Integer phone;
+	@Column(name="phone", unique=true, columnDefinition="varchar(15)")
+	private String phone;
 	
 	public int getId() {
 		return id;
@@ -51,18 +51,20 @@ public class Student implements Serializable{
 	public void setRoll(String roll) {
 		this.roll = roll;
 	}
-	public Integer getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(Integer phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public Student(int id, String name, String roll, Integer phone) {
-		this.id = id;
+	public Student(int id, String name, String roll, String phone) {
+		super();
+		this.id=id;
 		this.name = name;
 		this.roll = roll;
 		this.phone = phone;
 	}
+	
 	
 	
 	

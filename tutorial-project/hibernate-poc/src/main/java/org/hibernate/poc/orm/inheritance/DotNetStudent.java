@@ -1,5 +1,7 @@
 package org.hibernate.poc.orm.inheritance;
 
+import java.io.Serializable;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -7,11 +9,11 @@ import javax.persistence.Table;
 @Entity(name="dotnetstudent")
 @Table(name="tutouser.student")
 @DiscriminatorValue("ds")
-public class DotNetStudent extends Student{
+public class DotNetStudent extends Student implements Serializable{
 	
 	private double workingHr;
 
-	public DotNetStudent(int id, String name, String roll, Integer phone, double workingHr) {
+	public DotNetStudent(int id, String name, String roll, String phone, double workingHr) {
 		super(id, name, roll, phone);
 		this.workingHr=workingHr;
 		// TODO Auto-generated constructor stub

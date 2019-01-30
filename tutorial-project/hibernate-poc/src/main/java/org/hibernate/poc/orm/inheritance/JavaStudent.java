@@ -1,5 +1,7 @@
 package org.hibernate.poc.orm.inheritance;
 
+import java.io.Serializable;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -7,15 +9,17 @@ import javax.persistence.Table;
 @Entity(name="javastudent")
 @Table(name="tutouser.student")
 @DiscriminatorValue("js")
-public class JavaStudent extends Student{
+public class JavaStudent extends Student implements Serializable{
 	
-	private String tool;
-
-	public JavaStudent(int id, String name, String roll, Integer phone, String tool) {
+	public JavaStudent(int id, String name, String roll, String phone, String tool) {
 		super(id, name, roll, phone);
 		this.tool=tool;
 		// TODO Auto-generated constructor stub
 	}
+
+	private String tool;
+
+	
 
 	/**
 	 * 

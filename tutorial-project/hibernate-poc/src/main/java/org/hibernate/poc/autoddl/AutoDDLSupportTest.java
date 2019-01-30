@@ -20,9 +20,11 @@ public class AutoDDLSupportTest {
 			tx=session.beginTransaction();
 			
 			// Adding object using save, persist or saveOrUpdate methods
-			Employee emp=new Employee("Sudhir", "sudhir@gmail.com");
+			Employee emp=new Employee("FHGDSF", "kjfd@gmail.com");
 			Integer i=(Integer) session.save(emp);
 			tx.commit();
+			//Deattached state
+			session.evict(emp);
 			if(i!=null) {
 				System.out.println("Record Inserted Successfully!!");
 			}else {
@@ -31,8 +33,10 @@ public class AutoDDLSupportTest {
 			
 		}catch (Exception e) {
 			System.out.println("Exception in AuoDDLSupport:: "+e);
+			tx.rollback();
 		}finally {
 			session.close();
+			sf.close();
 		}
 		
 	}

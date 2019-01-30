@@ -1,10 +1,18 @@
 package org.hibernate.poc.orm.inheritance;
 
-public class PhpStudent extends Student{
+import java.io.Serializable;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity(name="phpstudent")
+@Table(name="tutouser.phpstudent")
+@DiscriminatorValue("ps")
+public class PhpStudent extends Student implements Serializable{
 	
 	private String branch;
 
-	public PhpStudent(int id, String name, String roll, Integer phone, String branch) {
+	public PhpStudent(int id, String name, String roll, String phone, String branch) {
 		super(id, name, roll, phone);
 		this.branch=branch;
 		// TODO Auto-generated constructor stub
