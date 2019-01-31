@@ -3,6 +3,8 @@ package org.hibernate.poc.connection;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+/**This class no longer used, only APPLICABLE in case of XML based mapping.
+ * **/
 public class ConfigurationTest {
 	public static SessionFactory buildSessionFactory() {
 		try {
