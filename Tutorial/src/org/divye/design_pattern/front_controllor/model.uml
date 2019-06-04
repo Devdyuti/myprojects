@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_FIJcMFtIEeejsJwuHj21Mw" name="model">
+  <ownedComment xmi:id="_5rQHcF1-EeeMl4S_QeEs7A">
+    <body>FrontController Design Pattern </body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_FJOaQFtIEeejsJwuHj21Mw" name="Interaction0"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7EODsFtIEeejsJwuHj21Mw" name="Dispatcher" clientDependency="_MJgJoFtJEeejsJwuHj21Mw _PHtnMFtJEeejsJwuHj21Mw _Bi3EQF18EeeMl4S_QeEs7A _J3yH0F18EeeMl4S_QeEs7A _VyOgkF18EeeMl4S_QeEs7A">
+    <ownedComment xmi:id="_G5-dcF19EeeMl4S_QeEs7A">
+      <body> Dispatcher Dispatch the request forie HomeView or StudentView </body>
+    </ownedComment>
+    <ownedAttribute xmi:id="_fI-NgF18EeeMl4S_QeEs7A" name="HomeView" visibility="private"/>
+    <ownedAttribute xmi:id="_hEamgF18EeeMl4S_QeEs7A" name="StudentView" visibility="private"/>
+    <ownedOperation xmi:id="_1q47QF18EeeMl4S_QeEs7A" name="Dispatcher"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ay3BgFtJEeejsJwuHj21Mw" name="HomeView">
+    <ownedOperation xmi:id="_vuq_AF19EeeMl4S_QeEs7A" name="show"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CdKnMFtJEeejsJwuHj21Mw" name="StudentView">
+    <ownedOperation xmi:id="_xIKhgF19EeeMl4S_QeEs7A" name="show"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_MJgJoFtJEeejsJwuHj21Mw" name="gd" supplier="_CdKnMFtJEeejsJwuHj21Mw" client="_7EODsFtIEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_PHtnMFtJEeejsJwuHj21Mw" name="" supplier="_Ay3BgFtJEeejsJwuHj21Mw" client="_7EODsFtIEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VsEsEFtJEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VzT8gFtJEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_BGG4MFtKEeejsJwuHj21Mw" name=""/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BhcH8V18EeeMl4S_QeEs7A"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_Bi3EQF18EeeMl4S_QeEs7A" name="Usage0" supplier="_BhcH8V18EeeMl4S_QeEs7A" client="_7EODsFtIEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_J2-PgF18EeeMl4S_QeEs7A"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_J3yH0F18EeeMl4S_QeEs7A" name="" supplier="_CdKnMFtJEeejsJwuHj21Mw" client="_7EODsFtIEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Vx-o8F18EeeMl4S_QeEs7A"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_VyOgkF18EeeMl4S_QeEs7A" name="" supplier="_Ay3BgFtJEeejsJwuHj21Mw" client="_7EODsFtIEeejsJwuHj21Mw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2-gp0F19EeeMl4S_QeEs7A" name="FrontController" clientDependency="_RiA9sF1-EeeMl4S_QeEs7A _eALHgF1-EeeMl4S_QeEs7A">
+    <ownedAttribute xmi:id="_5p0ZgF19EeeMl4S_QeEs7A" name="Dispatcher" visibility="private"/>
+    <ownedOperation xmi:id="_BfJXAF1-EeeMl4S_QeEs7A" name="isAuthenticated"/>
+    <ownedOperation xmi:id="_CBoZAF1-EeeMl4S_QeEs7A" name="trackRequest"/>
+    <ownedOperation xmi:id="_CgTSAF1-EeeMl4S_QeEs7A" name="dispatchRequest"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_RhyUMF1-EeeMl4S_QeEs7A"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_RiA9sF1-EeeMl4S_QeEs7A" name="" supplier="_RhyUMF1-EeeMl4S_QeEs7A" client="_2-gp0F19EeeMl4S_QeEs7A"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_eALHgF1-EeeMl4S_QeEs7A" name="FrontContoller uses Dispather" supplier="_7EODsFtIEeejsJwuHj21Mw" client="_2-gp0F19EeeMl4S_QeEs7A"/>
+</uml:Model>
