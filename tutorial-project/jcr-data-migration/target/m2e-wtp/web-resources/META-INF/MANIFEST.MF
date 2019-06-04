@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: jcr-data-migration
+Implementation-Version: 1.0-SNAPSHOT-RC-1.1
+Built-By: Dev
+Implementation-Vendor-Id: org.data.migration
+Build-Jdk: 1.8.0_141
+Implementation-URL: http://www.example.com/jcr-data-migration
+Created-By: Maven Integration for Eclipse
+
