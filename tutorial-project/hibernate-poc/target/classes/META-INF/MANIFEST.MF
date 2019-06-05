@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: hibernate-poc
-Implementation-Version: 1.0-SNAPSHOT-RC-1.1
-Built-By: Dev
-Implementation-Vendor-Id: org.hibernate.poc
-Build-Jdk: 1.8.0_141
-Implementation-URL: http://www.example.com/hibernate-poc
-Created-By: Maven Integration for Eclipse
-
