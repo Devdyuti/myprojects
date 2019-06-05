@@ -7,7 +7,7 @@
     <artifactId>tutorial-project</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>org.spring.boot.jpa.tuto</groupId>
+  <groupId>org.dev.tu.sbj.tuto</groupId>
   <artifactId>spring-boot-jpa-tuto</artifactId>
   <version>1.0-SNAPSHOT-RC-1.1</version>
   <name>spring-boot-jpa-tuto</name>
@@ -25,11 +25,16 @@
 	<!-- This is dependency for spring-data-jpa
 	looking for the CurdRepository thats y using spring-data-commons-core instead of spring-data-jpa
 	 -->
-	<dependency>
+	 
+<!-- 	 <dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-jpa</artifactId>
+	</dependency> -->
+<!-- 	<dependency>
 		<groupId>org.springframework.data</groupId>
 		<artifactId>spring-data-commons-core</artifactId>
 		<version>1.1.0.RELEASE</version>
-	</dependency>
+	</dependency> -->
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-devtools</artifactId>
@@ -40,17 +45,25 @@
 	 	<artifactId>ojdbc14</artifactId>
 	 	<version>${oracle14.db.version}</version>
 	 </dependency>
+	<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+	</dependency>
   </dependencies>
   
     <build>
-    <pluginManagement>
       <plugins>
         <plugin>
         	<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-maven-plugin</artifactId>
+        	   <configuration>
+                	<jvmArguments>
+                	-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000
+                	</jvmArguments>
+                </configuration>
         </plugin>
       </plugins>
-    </pluginManagement>
     <finalName>spring-boot-jpa</finalName>
   </build>
 </project>
