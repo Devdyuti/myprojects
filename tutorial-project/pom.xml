@@ -10,10 +10,10 @@
    <name>tutorial-project</name>
   
   <modules>
-  	<module>spring-boot-web</module>
+	<module>spring-boot-web</module>
   	<module>spring-ws</module>
     <module>jcr-data-migration</module>
-    <module>hibernate-poc</module>
+    <module>hibernate-poc</module> 
     <module>spring-boot-jpa-tuto</module>
   </modules>
   
