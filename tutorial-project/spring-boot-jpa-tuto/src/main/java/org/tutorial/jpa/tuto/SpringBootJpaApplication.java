@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableJpaRepositories(basePackages="org.tutorial.jpa.tuto.repository")
 @SpringBootApplication
-@ComponentScan(basePackages="org.tutorial.jpa.tutoX")
+@ComponentScan(basePackages="org.tutorial.jpa.tuto")
 public class SpringBootJpaApplication {
 	
 	public static void main(String[] args) {
