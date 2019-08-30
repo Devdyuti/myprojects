@@ -9,6 +9,7 @@
   </parent>
   <artifactId>spring-boot-jpa-tuto</artifactId>
   <name>spring-boot-jpa-tuto</name>
+	<url>www.mypage.com</url>	
   <packaging>jar</packaging>
   
   <properties>
