@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories(basePackages="org.tutorial.jpa.tuto.repository")
+//@EnableJpaRepositories(basePackages="org.tutorial.jpa.tuto.repository")
 @SpringBootApplication
 // @ImportResource("classpath:config/applicationContext.xml")
 @ComponentScan("org.tutorial.jpa.tuto")

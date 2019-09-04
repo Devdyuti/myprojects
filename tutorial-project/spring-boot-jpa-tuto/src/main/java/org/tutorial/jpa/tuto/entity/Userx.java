@@ -17,16 +17,18 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="TUTORIAL.USER")
-public class User {
+@Table(name="USERX")
+public class Userx {
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	@Column(name="ID_USER")
-	private Long id;
+	private int id;
 	@Column(name="USER_NAME")
 	private String name;
 	@Column(name="USER_AGE")
 	private Long age;
+//	@Column(name="USER_ADD")
+//	private String address;
 		
 }

@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.tutorial.jpa.tuto.entity.User;
-import org.tutorial.jpa.tuto.service.UserService;
+import org.tutorial.jpa.tuto.entity.Userx;
+import org.tutorial.jpa.tuto.service.UserxService;
 
 @RestController
 @RequestMapping(value="/user")
-public class UserController {
+public class UserxController {
 	
 	@Autowired
-	private UserService userService;
+	private UserxService userService;
 	
 	@RequestMapping(value="/checkStatus", method=RequestMethod.HEAD)
 	public void checkServiceavailablity(HttpServletResponse response) throws IOException {
@@ -30,7 +30,7 @@ public class UserController {
 	} 
 	
 	@PostMapping("/add")
-	public User insertUser(@RequestBody User user) {
+	public Userx insertUser(@RequestBody Userx user) {
 		return userService.addUser(user);
 	}
 
