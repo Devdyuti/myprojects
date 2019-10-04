@@ -8,7 +8,7 @@
     
    <packaging>pom</packaging>
    <name>tutorial-project</name>
-  
+     
   <modules>
 <!-- 	<module>spring-boot-web</module>
   	<module>spring-ws</module>
