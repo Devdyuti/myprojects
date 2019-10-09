@@ -28,7 +28,7 @@ public class Userx {
 	private String name;
 	@Column(name="USER_AGE")
 	private Long age;
-//	@Column(name="USER_ADD")
-//	private String address;
+	@Column(name="USER_ADD")
+	private String address;
 		
 }
