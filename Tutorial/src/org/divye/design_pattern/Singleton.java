@@ -1,7 +1,7 @@
 package org.divye.design_pattern;
 
 
-public class Singleton {
+public class Singleton{
 	
 	private static Singleton instance= new Singleton();
 	
@@ -19,4 +19,11 @@ public class Singleton {
 	protected Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException();
 	}
+	
+//	public static void main(String[] args) throws CloneNotSupportedException {
+//		Singleton instance1=Singleton.getInstance();
+//		Singleton instance2=(Singleton) instance1.clone();
+//		
+//		System.out.println(instance1==instance2);
+//	}
 }
