@@ -33,6 +33,7 @@
     <oracle14.db.version>10.2.0.4.0</oracle14.db.version>
     <oracle8.db.version>12.2.0.1</oracle8.db.version>
     <lombok.version>1.18.8</lombok.version>
+    <janino.version>2.7.8</janino.version>
   </properties>
 
   <dependencies>

@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +21,9 @@ import org.tutorial.jpa.tuto.service.UserxService;
 @RequestMapping(value="/user")
 public class UserxController {
 	
+	
+	private static final Logger LOGGER=LoggerFactory.getLogger(UserxController.class);
+	
 	@Autowired
 	private UserxService userService;
 	
@@ -31,7 +36,12 @@ public class UserxController {
 	
 	@PostMapping("/add")
 	public Userx insertUser(@RequestBody Userx user) {
-		return userService.addUser(user);
+		try {
+			return userService.addUser(user);
+		}catch (Exception e) {
+			LOGGER.error("EXCEPTION IN USERCONTROLLER"+e.getMessage());
+		}
+		return null;
 	}
 
 }

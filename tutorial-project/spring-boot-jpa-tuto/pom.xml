@@ -85,8 +85,13 @@
 	<groupId>javax.servlet</groupId>
 	<artifactId>javax.servlet-api</artifactId>
 </dependency>
-	 
-	 
+<!-- Logging with SL4J & LogBack -->
+	<dependency>
+		<groupId>org.codehaus.janino</groupId>
+		<artifactId>janino</artifactId>
+		<version>${janino.version}</version>
+	</dependency>
+	 	 
   </dependencies>
   
     <build>
