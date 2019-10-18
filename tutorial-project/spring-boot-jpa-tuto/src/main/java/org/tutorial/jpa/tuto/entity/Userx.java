@@ -17,7 +17,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="USERX")
+@Table(name="TUTORIAL.USERX")
 public class Userx {
 	
 	@Id
