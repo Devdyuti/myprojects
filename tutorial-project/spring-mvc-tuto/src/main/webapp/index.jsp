@@ -10,5 +10,7 @@
 <h2>index page</h2>
 <h4><i>Spring-mvc-Tutorial v4</i></h4>
 <a href="employee/getAllEmployees">getAllEmployees</a>
+<br>
+<a href="employee/addEmployee">add a employee</a>
 </body>
 </html>

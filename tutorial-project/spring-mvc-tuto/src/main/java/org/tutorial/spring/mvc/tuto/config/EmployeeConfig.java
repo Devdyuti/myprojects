@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter;
-import org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -23,15 +23,14 @@ public class EmployeeConfig extends WebMvcConfigurationSupport{
 	}
 	
 	@Bean
-	public DefaultAnnotationHandlerMapping defaultHandlerMapping() {
-		DefaultAnnotationHandlerMapping handler=new DefaultAnnotationHandlerMapping();
-		return handler;
+	public RequestMappingHandlerMapping requestHandlerMapping() {
+		RequestMappingHandlerMapping handlerMapping=new RequestMappingHandlerMapping();
+		return handlerMapping;
 	}
-	
 	@Bean
-	public AnnotationMethodHandlerAdapter annotationHandlerMapping() {
-		AnnotationMethodHandlerAdapter handler=new AnnotationMethodHandlerAdapter();
-		return handler;
+	public RequestMappingHandlerAdapter requestHandlerAdaptor() {
+		RequestMappingHandlerAdapter handlerAdaptor=new RequestMappingHandlerAdapter();
+		return handlerAdaptor;
 	}
 	
 	@Override
