@@ -1,4 +1,4 @@
-package org.dev.interview_test;
+package org.dev.baffle;
 
 
 /*Immutable class Test*/

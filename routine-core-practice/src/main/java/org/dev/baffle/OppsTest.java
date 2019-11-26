@@ -1,4 +1,4 @@
-package org.dev.interview_test;
+package org.dev.baffle;
 
 class PossibleDecode{
 	
@@ -49,6 +49,7 @@ class Testing{
 }
 public class OppsTest{
 	
+	
 	static int temp;
 	
 	public static int getValue(int input1, int[] input2) {
@@ -74,6 +75,10 @@ public class OppsTest{
 		for(int i=0;i<PossibleDecode.ar.length;i++) {
 			System.out.println((char)PossibleDecode.ar[i]);
 		}
+		
+		System.out.println(115%16);
+		
+
 		
 	}
 	

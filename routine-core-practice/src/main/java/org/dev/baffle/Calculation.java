@@ -1,4 +1,4 @@
-package org.dev.interview_test;
+package org.dev.baffle;
 
 public class Calculation {
 	   public static int findMax(int arr[]){  

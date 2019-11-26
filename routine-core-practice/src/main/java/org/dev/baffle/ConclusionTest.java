@@ -1,4 +1,4 @@
-package org.dev.interview_test;
+package org.dev.baffle;
 
 import java.util.ArrayList;
 import java.util.Collections;
