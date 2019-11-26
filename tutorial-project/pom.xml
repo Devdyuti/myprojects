@@ -14,8 +14,7 @@
   	<module>spring-ws</module>
     <module>jcr-data-migration</module>
     <module>hibernate-poc</module>  -->
-    <!-- <module>spring-boot-jpa-tuto</module> -->
-    <module>spring-mvc-tuto</module>
+    <module>spring-boot-jpa-tuto</module>
   </modules>
   
     <parent>
@@ -36,6 +35,8 @@
     <lombok.version>1.18.8</lombok.version>
     <janino.version>2.7.8</janino.version>
     <spring.version>4.3.0.RELEASE</spring.version>
+    <!-- <spring.version>5.1.4.RELEASE</spring.version> -->
+    <!-- <spring.version>4.0.2.RELEASE</spring.version> -->
     <spring.security.version>4.0.2.RELEASE</spring.security.version>
   </properties>
 
