@@ -30,22 +30,27 @@ class Account implements Serializable{
 public class CustomizedSerilizationTest {
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-/*		Account a=new Account();
-		a.uname="Devdyuti";
-		a.password="upbal@IDSP2004";
+	//	Account a=new Account();
+//		a.uname="Devdyuti";
+//		a.password="upbal@IDSP2004";
 		
 		//Perform serilization 
-		FileOutputStream fos=new FileOutputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/CutomizedSer.ser");
-		ObjectOutputStream oos=new ObjectOutputStream(fos);
-		oos.writeObject(a);
-		System.out.println("Serilization Completes");*/
+//		FileOutputStream fos=new FileOutputStream("C:/Users/dsingh/Desktop/temp/CutomizedSer.ser");
+//		ObjectOutputStream oos=new ObjectOutputStream(fos);
+//		oos.writeObject(a);
+//		System.out.println("Serilization Completes");
 		
 		//Deserlizaing code
-		FileInputStream fis=new FileInputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/CutomizedSer.ser");
-		ObjectInputStream ois=new ObjectInputStream(fis);
-		Account a=(Account)ois.readObject();
 		
-		System.out.println("uname: "+a.uname+" password: "+a.password);
+		
+		  FileInputStream fis=new
+		  FileInputStream("C:/Users/dsingh/Desktop/temp/CutomizedSer.ser");
+		  ObjectInputStream ois=new ObjectInputStream(fis);
+		  Account a=(Account)ois.readObject();
+		  
+		  System.out.println("uname: "+a.uname+" password: "+a.password);
+		 
+		 
 	}
 
 }

@@ -1,12 +1,18 @@
 package org.dev.design_pattern;
 
+import java.io.Serializable;
 
-public class Singleton{
+public class Singleton implements Serializable{
 	
-	private static Singleton instance= new Singleton();
+	
+	private static Singleton instance=new Singleton();
 	
 	private Singleton(){
 		System.out.println("Default Constructor of Signleton class: ");
+		
+//		if(instance!=null) {
+//			throw new InstantiationError("Object creation not possible");
+//		}
 	}
 	public static Singleton getInstance(){
 		if(instance==null){
@@ -15,6 +21,11 @@ public class Singleton{
 			return instance;
 		}
 	}
+// Serilizable breaking case	
+//	protected Object readResolve() {
+//		return instance;
+//	}
+	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException();
