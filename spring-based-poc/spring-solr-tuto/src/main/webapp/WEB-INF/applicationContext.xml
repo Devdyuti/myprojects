@@ -11,5 +11,7 @@
 
 	<context:component-scan base-package="org.tutorial.spring.solr" />
 	
-
+	<!-- Detects the presence of jackson and set up the corresponding converters -->
+	<mvc:annotation-driven />
+	
 </beans>
