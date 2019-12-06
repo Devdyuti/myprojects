@@ -14,22 +14,31 @@ public class AutoDDLSupportTest {
 		Session session=null;
 		SessionFactory sf=null;
 		
+
+		
 		try {
 			sf=CHibernateUtils.getSessionFactory();
 			session=sf.openSession();
 			tx=session.beginTransaction();
 			
-			// Adding object using save, persist or saveOrUpdate methods
-			Employee emp=new Employee("FHGDSF", "kjfd@gmail.com");
-			Integer i=(Integer) session.save(emp);
-			tx.commit();
-			//Deattached state
-			session.evict(emp);
-			if(i!=null) {
-				System.out.println("Record Inserted Successfully!!");
-			}else {
-				System.out.println("Duplicate value found");
-			}
+			
+			
+				// Adding object using save, persist or saveOrUpdate methods
+				Employee emp=new Employee("Devdyu","kjfd@gmail.com");
+
+				Integer i=(Integer) session.save(emp);
+				tx.commit();
+				//Deattached state
+				session.evict(emp);
+				if(i!=null) {
+					System.out.println("Record Inserted Successfully!!");
+				}else {
+					System.out.println("Duplicate value found");
+				}
+			
+			
+
+
 			
 		}catch (Exception e) {
 			System.out.println("Exception in AuoDDLSupport:: "+e);

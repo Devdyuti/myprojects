@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name="dotnetstudent")
-@Table(name="tutouser.student")
+@Table(name="tutorial.student")
 @DiscriminatorValue("ds")
 public class DotNetStudent extends Student implements Serializable{
 	

@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity(name="vote")
-@Table(name="tutouser.vote")
+@Table(name="tutorial.vote")
 
 public class Vote implements Serializable{
 	/**

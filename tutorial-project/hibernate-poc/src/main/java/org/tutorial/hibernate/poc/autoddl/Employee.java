@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity(name="employee")
-@Table(name="tutouser.employee")
+@Table(name="tutorial.employee")
 public class Employee implements Serializable{
 	
 	/**
@@ -48,6 +48,9 @@ public class Employee implements Serializable{
 	public Employee(String name, String email) {
 		this.name = name;
 		this.email = email;
+	}
+	public Employee() {
+		super();
 	}
 	
 	

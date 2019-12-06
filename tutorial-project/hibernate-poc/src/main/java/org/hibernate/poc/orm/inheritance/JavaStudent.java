@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name="javastudent")
-@Table(name="tutouser.student")
+@Table(name="tutorial.student")
 @DiscriminatorValue("js")
 public class JavaStudent extends Student implements Serializable{
 	

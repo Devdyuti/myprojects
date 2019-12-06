@@ -14,7 +14,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity(name="student")
-@Table(name="tutouser.student")
+@Table(name="tutorial.student")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="stype", discriminatorType=DiscriminatorType.STRING, length=20)
 public class Student implements Serializable{

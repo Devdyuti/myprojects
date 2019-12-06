@@ -11,7 +11,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity(name="animal")
-@Table(name="tutouser.animal")
+@Table(name="tutorial.animal")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class Animal implements Serializable{
 	/**

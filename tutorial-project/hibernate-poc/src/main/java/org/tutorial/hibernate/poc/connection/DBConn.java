@@ -14,7 +14,7 @@ public class DBConn {
 	public static Connection getConnection() {
 		Connection conn=null;
 		try {
-			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:rcde","system","root");
+			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","root");
 		}catch (Exception e) {
 			System.out.println("Connection couldn't established:: "+e);
 		}

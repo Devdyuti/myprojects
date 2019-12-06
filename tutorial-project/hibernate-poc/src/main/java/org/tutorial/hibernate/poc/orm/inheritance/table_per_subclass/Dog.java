@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name="dog")
-@Table(name="tutouser.dog")
+@Table(name="tutorial.dog")
 public class Dog extends Animal{
 	public Dog(int id, String name, int age, String bark) {
 		super(id, name, age);

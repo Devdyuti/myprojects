@@ -11,7 +11,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity(name="fruit")
-@Table(name="tutouser.fruit")
+@Table(name="tutorial.fruit")
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public class Fruit implements Serializable{
 	

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity(name="voter")
-@Table(name="tutouser.voter")
+@Table(name="tutorial.voter")
 public class Voter implements Serializable{
 	/**
 	 * 

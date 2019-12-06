@@ -6,7 +6,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 @Entity(name="phpstudent")
-@Table(name="tutouser.phpstudent")
+@Table(name="tutorial.phpstudent")
 @DiscriminatorValue("ps")
 public class PhpStudent extends Student implements Serializable{
 	

@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity(name="orange")
-@Table(name="tutouser.orange")
+@Table(name="tutorial.orange")
 public class Orange extends Fruit{
 	public Orange(int id, String name, String location, String color) {
 		super(id, name, location);
