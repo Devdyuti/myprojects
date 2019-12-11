@@ -20,24 +20,33 @@
 		<mapping class="org.tutorial.hibernate.poc.autoddl.Employee" />
 		
 		<!-- Inheritance relationship using discriminator value -->
-<!-- 		<mapping class="org.hibernate.poc.orm.inheritance.Student" />
+		<mapping class="org.hibernate.poc.orm.inheritance.Student" />
 		<mapping class="org.hibernate.poc.orm.inheritance.JavaStudent" />
 		<mapping class="org.hibernate.poc.orm.inheritance.DotNetStudent" />
-		<mapping class="org.hibernate.poc.orm.inheritance.PhpStudent" /> -->
+		<mapping class="org.hibernate.poc.orm.inheritance.PhpStudent" />
 		
 		<!-- Inheritance table per sub-class 'IS-A Relationship' -->
-<!-- 		<mapping class="org.hibernate.poc.orm.inheritance.table_per_subclass.Animal" />
-		<mapping class="org.hibernate.poc.orm.inheritance.table_per_subclass.Dog" />
-		<mapping class="org.hibernate.poc.orm.inheritance.table_per_subclass.Cat" /> -->
+		
+		<mapping class="org.tutorial.hibernate.poc.orm.inheritance.table_per_subclass.Animal" />
+		<mapping class="org.tutorial.hibernate.poc.orm.inheritance.table_per_subclass.Dog" />
+		<mapping class="org.tutorial.hibernate.poc.orm.inheritance.table_per_subclass.Cat" />
 		
 		<!-- Inheritance table per concrete-class 'IS-A Relationship' -->
-<!-- 		<mapping class="org.hibernate.poc.orm.inheritance.table_per_concreteClass.Fruit" />
-		<mapping class="org.hibernate.poc.orm.inheritance.table_per_concreteClass.Apple" />
-		<mapping class="org.hibernate.poc.orm.inheritance.table_per_concreteClass.Orange" /> -->
+		<mapping class="org.tutorial.hibernate.poc.orm.inheritance.table_per_concreteClass.Fruit" />
+		<mapping class="org.tutorial.hibernate.poc.orm.inheritance.table_per_concreteClass.Apple" />
+		<mapping class="org.tutorial.hibernate.poc.orm.inheritance.table_per_concreteClass.Orange" />
 		
 		<!-- Assotiation example OneToOne Mapping -->
-<!-- 		<mapping class="org.hibernate.poc.association.Voter" />
-		<mapping class="org.hibernate.poc.association.Vote" /> -->
+		<mapping class="org.tutorial.hibernate.poc.association.Voter" />
+		<mapping class="org.tutorial.hibernate.poc.association.Vote" />
+		
+		<!-- Assotiation example OneToMany Mapping -->
+		<mapping class="org.tutorial.hibernate.poc.association.Teacher" />
+		<mapping class="org.tutorial.hibernate.poc.association.Topic" />
+		
+		<!-- Assotiation example ManyToOne Mapping -->
+		<mapping class="org.tutorial.hibernate.poc.association.PGStudent" />
+		<mapping class="org.tutorial.hibernate.poc.association.Address" />
 
  	</session-factory>
  </hibernate-configuration>
