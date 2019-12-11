@@ -1,33 +1,31 @@
 package org.dev.baffle;
 
-import java.util.HashMap;
-import java.util.Map;
-
-class IntDecode{
-	
-	public static Map<Integer, Character> map=new HashMap<Integer, Character>();
-	
-	static {
-		for(int i=65;i<=90;i++) {
-			map.put(i-64, (char)i);
+class MyThread extends Thread{
+	@Override
+	public void run() {
+		for(int i=0;i<10;i++) {
+			if(i==5) {
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			System.out.println("child "+i);
+			
 		}
 	}
-	
-	public static int getPossibleDecodeVal(int input) {
-		char[] ch=String.valueOf(input).toCharArray();
-		for(int i=0;i<ch.length;i++) {
-		}
-		return 0;
-	}
-	
 }
 public class HackerRank {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
+		MyThread t=new MyThread();
+		t.start();
 		
-		IntDecode.getPossibleDecodeVal(123);
+		t.join();
 		
-	//	System.out.println(IntDecode.map);
-		
-		
+		for (int i = 0; i < 10; i++) {
+			System.out.println("main "+i);
+		}
 	}
 }

@@ -37,14 +37,14 @@ public class ExternalizationDemo implements Externalizable{
 		out.writeInt(i);
 	}
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-//	    ExternalizationDemo d1=new ExternalizationDemo("Devdyuti", 10, 20);
+/*	    ExternalizationDemo d1=new ExternalizationDemo("Devdyuti", 10, 20);
 		//Serilization
-//		FileOutputStream fos=new FileOutputStream("C:/Users/dsingh/Desktop/temp/externalize.ser");
-//		ObjectOutputStream oos=new ObjectOutputStream(fos);
-//		oos.writeObject(d1);
+		FileOutputStream fos=new FileOutputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/xyz.ser");
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(d1);*/
 		
 		//Deserilization
-		FileInputStream fis=new FileInputStream("C:/Users/dsingh/Desktop/temp/externalize.ser");
+		FileInputStream fis=new FileInputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/xyz.ser");
 		ObjectInputStream ois=new ObjectInputStream(fis);
 		ExternalizationDemo d2=(ExternalizationDemo) ois.readObject();
 		

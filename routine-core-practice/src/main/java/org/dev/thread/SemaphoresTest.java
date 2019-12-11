@@ -2,22 +2,21 @@ package org.dev.thread;
 
 import java.util.concurrent.Semaphore;
 
-class Shareds  
-{ 
-    static int count = 0; 
+class Shared{
+	static int count=0;
 }
-class MyThreads extends Thread 
-{ 
-    Semaphore sem; 
-    String threadName; 
-    public MyThreads(Semaphore sem, String threadName)  
-    { 
-        super(threadName); 
-        this.sem = sem; 
-        this.threadName = threadName; 
-    } 
-  
-    @Override
+class MyThread3 extends Thread{
+	
+	Semaphore sem;;
+	String threadName;
+	
+	public MyThread3(Semaphore sem, String threadName) {
+		super(threadName);
+		this.sem=sem;
+		this.threadName=threadName;
+	}
+	
+	@Override
     public void run() { 
           
         // run by thread A 
@@ -34,13 +33,13 @@ class MyThreads extends Thread
               
                 System.out.println(threadName + " gets a permit."); 
           
-                // Now, accessing the Shareds resource. 
+                // Now, accessing the shared resource. 
                 // other waiting threads will wait, until this  
                 // thread release the lock 
                 for(int i=0; i < 5; i++) 
                 { 
-                    Shareds.count++; 
-                    System.out.println(threadName + ": " + Shareds.count); 
+                    Shared.count++; 
+                    System.out.println(threadName + ": " + Shared.count); 
           
                     // Now, allowing a context switch -- if possible. 
                     // for thread B to execute 
@@ -69,13 +68,13 @@ class MyThreads extends Thread
               
                 System.out.println(threadName + " gets a permit."); 
           
-                // Now, accessing the Shareds resource. 
+                // Now, accessing the shared resource. 
                 // other waiting threads will wait, until this  
                 // thread release the lock 
                 for(int i=0; i < 5; i++) 
                 { 
-                    Shareds.count--; 
-                    System.out.println(threadName + ": " + Shareds.count); 
+                    Shared.count--; 
+                    System.out.println(threadName + ": " + Shared.count); 
           
                     // Now, allowing a context switch -- if possible. 
                     // for thread A to execute 
@@ -89,18 +88,19 @@ class MyThreads extends Thread
                 sem.release(); 
         } 
     } 
-} 
-public class SemaphoreTest {
+	
+}
+public class SemaphoresTest {
 	public static void main(String[] args) throws InterruptedException {
-		// creating a Semaphore object 
+		 // creating a Semaphore object 
         // with number of permits 1 
         Semaphore sem = new Semaphore(1); 
           
         // creating two threads with name A and B 
         // Note that thread A will increment the count 
         // and thread B will decrement the count 
-        MyThreads mt1 = new MyThreads(sem, "A"); 
-        MyThreads mt2 = new MyThreads(sem, "B"); 
+        MyThread3 mt1 = new MyThread3(sem, "A"); 
+        MyThread3 mt2 = new MyThread3(sem, "B"); 
           
         // stating threads A and B 
         mt1.start(); 
@@ -112,6 +112,6 @@ public class SemaphoreTest {
           
         // count will always remain 0 after 
         // both threads will complete their execution 
-        System.out.println("count: " + Shareds.count); 
+        System.out.println("count: " + Shared.count); 
 	}
 }

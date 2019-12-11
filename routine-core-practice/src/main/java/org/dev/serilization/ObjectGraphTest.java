@@ -24,13 +24,13 @@ public class ObjectGraphTest {
 		
 //		Dogg d=new Dogg();
 //		//Perform serilization 
-//		FileOutputStream fos=new FileOutputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/objectGraph.ser");
+//		FileOutputStream fos=new FileOutputStream("C:/Users/Dev/Desktop/temp/objectGraph.ser");
 //		ObjectOutputStream oos=new ObjectOutputStream(fos);
 //		oos.writeObject(d);
 //		System.out.println("Serilization Completes");
 		
 		//Deserlization 
-		FileInputStream fis=new FileInputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/objectGraph.ser");
+		FileInputStream fis=new FileInputStream("C:/Users/Dev/Desktop/temp/objectGraph.ser");
 		ObjectInputStream ois=new ObjectInputStream(fis);
 		Dogg d=(Dogg)ois.readObject();
 		System.out.println(d.c.r.i);

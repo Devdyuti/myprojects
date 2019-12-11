@@ -20,18 +20,18 @@ class Accounts implements Serializable{
 	private void writeObject(ObjectOutputStream oos)throws Exception{
 		System.out.println("Call writeObject()");
 		oos.defaultWriteObject();
-		oos.writeObject(uname);
-		oos.writeObject(password);
-		address="Address Encrepted";
-		oos.writeObject(address);
+		//oos.writeObject(uname);
+		//oos.writeObject(password);
+		//address="Address Encrepted";
+		//oos.writeObject(address);
 	}
 	private void readObject(ObjectInputStream ois)throws Exception{
 		System.out.println("Call readObject()");
 		ois.defaultReadObject();
-		uname=(String)ois.readObject();
-		password=(String)ois.readObject();
-		String enc_address=(String)ois.readObject();
-		address=enc_address+"Now it decrpted";
+//		uname=(String)ois.readObject();
+//		password=(String)ois.readObject();
+//		String enc_address=(String)ois.readObject();
+//		address=enc_address+"Now it decrpted";
 		
 	}
 	
@@ -78,19 +78,17 @@ public class DifferenceCustomSerAndExternalization {
 //		p.password="Dev@123";
 //		p.address="Address Changed";
 //		//Perform serilization 
-//		FileOutputStream fos=new FileOutputStream("C:/Users/dsingh/Desktop/temp/DifferenceCusandExt.ser");
+//		FileOutputStream fos=new FileOutputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/DifferenceCusandExt.ser");
 //		ObjectOutputStream oos=new ObjectOutputStream(fos);
 //		oos.writeObject(p);
 //		System.out.println("Serilization Completes");
 		
 		//Deserlizaing code
-		FileInputStream fis=new FileInputStream("C:/Users/dsingh/Desktop/temp/DifferenceCusandExt.ser");
+		FileInputStream fis=new FileInputStream("E:/MAVEN-WORKSPACE/Tutorial/src/org/divye/serilization/DifferenceCusandExt.ser");
 		ObjectInputStream ois=new ObjectInputStream(fis);
-		Person p1=(Person)ois.readObject();
-	//	Accounts a1=(Accounts)ois.readObject();
+		Person a1=(Person)ois.readObject();
 		
-	//	System.out.println("NAME: "+a1.uname+" PASS: "+a1.password+" ADD: "+a1.address);
-		System.out.println("NAME: "+p1.uname+" PASS: "+p1.password+" ADD: "+p1.address);
+		System.out.println("NAME: "+a1.uname+" PASS: "+a1.password+" ADD: "+a1.address);
 		
 	}
 
